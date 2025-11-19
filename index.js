@@ -1,9 +1,10 @@
 const http = require("http");
 const fs = require("fs");
 const url = require("url");
+const express = require("express");
 
 
-const myServer = http.createServer((req, res) =>{
+function handlerFn(req, res){
     const log = `${Date.now()} : ${req.url} new req Reaceived\n`
     if (req.url === "/favicon.ico") return res.end();
     const myUrl = url.parse(req.url, true);
@@ -36,6 +37,8 @@ const myServer = http.createServer((req, res) =>{
         
     })
     // console.log(req.headers)
-});
+}
+
+const myServer = http.createServer(handlerFn)
 
 myServer.listen("8000", () => console.log("server started"))
