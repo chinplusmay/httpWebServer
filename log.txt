@@ -50,3 +50,9 @@
 1763553912823 : /search?myname=chinmmayy&id=2&searchquery=js+engine+explained new req Reaceived
 1763572834820 : /search?myname=chinmmayy&id=2&searchquery=js+engine+explained new req Reaceived
 1763572844083 : /about?myname=cd&id=2 new req Reaceived
+
+ 1764052721883: GET: /api/users/
+
+ 1764052746321: PUT: /api/users/1002
+
+ 1764161150333: GET: /favicon.ico

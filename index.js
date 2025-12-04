@@ -4,10 +4,31 @@ const PORT = 8000
 const app = express();
 const users = require("./MOCK_DATA.json")
 
-
-//middleware-plugin
-
+ //middleware-plugin
 app.use(express.urlencoded({extended:false}))
+
+app.use((req, res, next) => {
+    req.myName = "neha";
+    console.log("hey from midware 1")
+    next();
+})
+
+app.use((req, res, next) =>{
+    fs.appendFile(
+        "./log.txt",
+        `\n ${Date.now()}: ${req.method}: ${req.path}\n`,
+        (err, data) =>{
+            next();
+        }
+    )
+})
+
+app.use((req, res, next) => {
+    console.log("hey from midware 2", req.myName)
+    next();
+})
+
+
 
 //REST API
 app.get("/api/users", (req, res) =>{
