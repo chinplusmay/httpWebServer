@@ -56,3 +56,23 @@
  1764052746321: PUT: /api/users/1002
 
  1764161150333: GET: /favicon.ico
+
+ 1765273987828: POST: /api/users/
+
+ 1765274025425: POST: /api/users
+
+ 1765274334636: POST: /api/users
+
+ 1765274377959: POST: /api/users
+
+ 1765274435691: POST: /api/users
+
+ 1765274598155: POST: /api/users
+
+ 1765276857233: GET: /api/users
+
+ 1765276899399: GET: /api/users
+
+ 1765276899508: GET: /favicon.ico
+
+ 1765277336770: GET: /api/users/6937f3e6782c3ace1a1450e2
